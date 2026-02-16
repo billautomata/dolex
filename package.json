@@ -1,7 +1,7 @@
 {
   "name": "@outsidedata/dolex",
-  "version": "0.1.2",
-  "description": "Visualization intelligence for AI — 43 handcrafted chart patterns with React components, MCP server, and self-contained HTML builders",
+  "version": "0.1.3",
+  "description": "AI data analyst — 43 handcrafted visualization patterns, query engine with window functions, and auto-analysis planning via MCP",
   "type": "module",
   "license": "MIT",
   "keywords": [
