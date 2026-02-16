@@ -16,7 +16,12 @@ import { formatUptime } from './shared.js';
 import type { SourceManager } from '../../connectors/manager.js';
 
 const require = createRequire(import.meta.url);
-const { version: dolexVersion } = require('../../../package.json');
+let dolexVersion: string;
+try {
+  dolexVersion = require('../../../../package.json').version;
+} catch {
+  dolexVersion = require('../../../package.json').version;
+}
 
 export const bugReportInputSchema = z.object({
   description: z.string().describe('What went wrong — describe the issue'),

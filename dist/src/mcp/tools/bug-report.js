@@ -12,7 +12,13 @@ import { resultCacheStats } from './result-cache.js';
 import { operationLog } from './operation-log.js';
 import { formatUptime } from './shared.js';
 const require = createRequire(import.meta.url);
-const { version: dolexVersion } = require('../../../package.json');
+let dolexVersion;
+try {
+    dolexVersion = require('../../../../package.json').version;
+}
+catch {
+    dolexVersion = require('../../../package.json').version;
+}
 export const bugReportInputSchema = z.object({
     description: z.string().describe('What went wrong — describe the issue'),
     specId: z.string().optional().describe('Spec ID from a recent visualize/refine call to include context'),
