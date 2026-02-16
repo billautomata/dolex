@@ -1,5 +1,5 @@
 {
-  "name": "dolex",
+  "name": "@outsidedata/dolex",
   "version": "0.1.0",
   "description": "Visualization intelligence for AI — 43 handcrafted chart patterns with React components, MCP server, and self-contained HTML builders",
   "type": "module",
